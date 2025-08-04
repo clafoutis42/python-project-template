@@ -1,0 +1,22 @@
+{
+    "project_name": "My FastAPI Project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+    "project_description": "A FastAPI project generated from cookiecutter template",
+    "author_name": "Your Name",
+    "author_email": "your.email@example.com",
+    "version": "0.1.0",
+    "python_version": "~=3.12",
+    "include_docker": ["y", "n"],
+    "include_github_actions": ["y", "n"],
+    "include_pre_commit": ["y", "n"],
+    "_copy_without_render": [
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.gif",
+        "*.bmp",
+        "*.svg",
+        "*.ico",
+        "*.tiff"
+    ]
+}

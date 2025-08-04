@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: "uv"
+    directory: "/"
+    groups:
+      python-dependencies:
+        patterns:
+          - "*"
+    assignees:
+      - "clafoutis42"
+    schedule:
+      day: "tuesday"
+      time: "02:00"
+      interval: "weekly"
+      timezone: Europe/Paris
+  - package-ecosystem: "docker"
+    directory: "/"
+    groups:
+      docker-dependencies:
+        patterns:
+          - "*"
+    assignees:
+      - "clafoutis42"
+    schedule:
+      day: "tuesday"
+      time: "02:00"
+      interval: "weekly"
+      timezone: Europe/Paris

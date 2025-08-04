@@ -1,0 +1,23 @@
+x-common:
+  &x-common
+  env_file:
+    - ".env"
+  logging:
+    options:
+      max-file: "5"
+      max-size: 10m
+
+x-build:
+  &x-build
+  image: {{cookiecutter.project_slug}}-dev
+  build:
+    context: .
+    target: development
+
+services:
+  api:
+    <<: [*x-common, *x-build]
+    ports:
+      - 127.0.0.1:8000:8000
+    volumes:
+      - ./app:/app/app
