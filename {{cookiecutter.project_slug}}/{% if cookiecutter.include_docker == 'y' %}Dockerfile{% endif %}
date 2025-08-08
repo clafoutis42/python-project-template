@@ -60,7 +60,6 @@ COPY --chown={{cookiecutter.project_slug}} --from=builder $VIRTUAL_ENV $VIRTUAL_
 
 COPY --chown={{cookiecutter.project_slug}} ./app ./app/
 COPY --chown={{cookiecutter.project_slug}} ./config/production.py ./config.py
-COPY --chown={{cookiecutter.project_slug}} ./config/llm_settings.yml ./config/llm_settings.yml
 
 RUN --mount=from=builder,source=/bin/uv,target=/bin/uv \
     --mount=type=cache,target=/root/.cache/uv \
